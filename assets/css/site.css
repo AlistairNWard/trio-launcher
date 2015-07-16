@@ -1,0 +1,71 @@
+
+
+body {
+  font-family: 'Quattrocento Sans', sans-serif;
+  /* try this out 
+  background-color: rgb(255, 255, 255);
+  color: #66615b; 
+  font-family: 'AvenirNextLTW01-Regular', Helvetica, Arial, sans-serif;
+  */
+
+  /* for bold with new font
+  font-family: 'Avenir Next LT W01 Bold';
+  */
+}
+
+/* text styles */
+.iobio {
+    font-size: 34px;
+    color: rgb(132, 132, 132);
+    font-family: Quicksand;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.iobioapp {
+    font-size: 34px;
+    color: #6898A8;
+    font-family: Quicksand;
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.iobioproject {
+    font-size: 18px;
+    color: #6898A8;
+    font-family: Quicksand;
+    line-height: 45px;
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* trio-launcher styles */
+
+.title-bar {
+  position:fixed;
+  width:100%;
+  z-index:2;
+  right:0px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 8px;
+}
+
+/* General card styles */
+.general-card {
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 8px;
+}
+
+.card-label {
+  color: rgba(104, 152, 168, 1);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: Quicksand;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-left: 5px;
+}

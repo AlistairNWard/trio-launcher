@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>trio-launcher.iobio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Quattrocento+Sans:400,700|Open+Sans:400,600|Montserrat|Quicksand:400|Raleway' rel='stylesheet' type='text/css'>
+
+  <!-- material design for bootstrap  -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap.material-design/0.2.2/css/material-wfont.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap.material-design/0.2.2/css/material.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap.material-design/0.2.2/css/ripples.min.css">
+  <link href="http://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+
+  <!-- site stylesheets -->
+  <link rel="stylesheet" href="assets/css/gene.d3.css" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+
+</head>
+
+
+<body>
+  
+  <!-- SCRIPTS -->
+  <script>
+    var selectedSample = 'proband'
+    $('.table > tr').click(function() {
+      document.getElementById("home").innerHTML = "bob";
+    })
+  </script>
+
+  <div class="container-fluid">
+
+    <!-- Title -->
+    <div class="title-bar shadow-z-1">
+      <a id="home" href="/"><span class="iobioapp">trio-launcher</span><span class="iobio">.iobio</span></a>
+      <a href="http://iobio.io" class="iobioproject"><span>an iobio project</span></a>
+    </div>
+
+    <!-- Data entry card -->
+    <div class="general-card shadow-z-1" style="padding-top:70px;">
+      <div class="card-label">DATA SELECTION</div>
+      <ul class="list-group">
+        <li class="list-group-item" onclick="document.getElementById('home').innerHTML = 'bob';">First item</li>
+        <li class="list-group-item">Second item</li>
+        <li class="list-group-item">Third item</li>
+      </ul>
+    </div>
+
+    <!-- Data entry card -->
+    <div class="general-card shadow-z-1">
+      <div class="card-label" style="padding-top:5px;">DATA SELECTION</div>
+
+        <!-- Table of files -->
+        <div style="padding-left:5px; padding-top:5px; padding-bottom:5px;">
+          <table class="table table-bordered table-responsive table-hover" style="width:70%;">
+            <thead>
+              <tr>
+                <th>Filename</th>
+                <th>Sample</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>File1</td>
+                <td>Not set</td>
+              </tr>
+              <tr>
+                <td>File2</td>
+                <td>Not set</td>
+              </tr>
+              <tr>
+                <td>File3</td>
+                <td>Not set</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pedigree select -->
+        <form role="form" style="padding-left:5px;">
+          <div class="radio-inline">
+            <label><input type="radio" name="optradio" checked="">Proband</label>
+          </div>
+          <div class="radio-inline">
+            <label><input type="radio" name="optradio">Mother</label>
+          </div>
+          <div class="radio-inline">
+            <label><input type="radio" name="optradio">Father</label>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</body>
+

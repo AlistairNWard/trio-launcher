@@ -1,0 +1,67 @@
+
+
+
+.ibo-gene .cds, .ibo-gene .utr { 
+  fill:   rgba(104, 152, 168, 0.6);
+  stroke: rgba(104, 152, 168, 1);
+}
+#zoom-region-chart.ibo-gene .cds, #zoom-region-chart.ibo-gene .utr { 
+  fill:   rgba(104, 152, 168, 0.3);
+  stroke: rgba(104, 152, 168, 0.8);
+}
+#transcript-menu-item.ibo-gene .transcript.selected .utr,
+#transcript-menu-item.ibo-gene .transcript.selected .cds
+{ 
+  fill: #BFC83F;
+  stroke: #BFC83F;
+}
+#transcript-menu-item.ibo-gene .utr:hover,
+#transcript-menu-item.ibo-gene .cds:hover,
+#transcript-menu-item.ibo-gene .reference:hover
+{ 
+  cursor: pointer;
+}
+
+#transcript-menu-item.ibo-gene .transcript.selected .reference {
+  stroke: rgb(0, 0, 0);
+  stroke-width: 1.5px;
+}
+.ibo-gene .reference { 
+  stroke: rgb(150,150,150); 
+}
+.ibo-gene .name { 
+  font-size: 13px; fill: 
+  rgb(120,120,120); 
+}
+#zoom-region-chart.ibo-gene .cds.danger, #zoom-region-chart.ibo-gene .utr.danger { 
+  fill: rgba(226, 37, 37, .6);
+  stroke: rgba(226,37,37,.6);
+}
+#transcript-menu-item.ibo-gene .transcript.selected .name { 
+  font-style: bold;
+  fill: black;
+}
+#transcript-menu-item.ibo-gene .name { 
+  font-size: 11px; 
+  fill: rgb(120,120,120); 
+}
+#transcript-menu-item.ibo-gene .name:hover { 
+  cursor: pointer;
+  fill: black;
+  font-style: bold;
+}
+.ibo-gene .arrow { stroke: rgb(150,150,150); fill: none; }
+.ibo-gene .axis path, .ibo-gene .axis line { fill: none; stroke: lightgrey; shape-rendering: crispEdges; }
+.ibo-gene .x.axis text{ font-size: 10px; }
+.ibo-gene .tooltip {   
+  position: absolute;           
+  text-align: center;           
+  z-index:20;
+  color:white;
+  padding: 4px 6px 4px 6px;             
+  font: 11px arial;        
+  background: rgb(80,80,80);   
+  border: 0px;      
+  border-radius: 4px;           
+  pointer-events: none;         
+}
