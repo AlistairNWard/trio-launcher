@@ -13,6 +13,8 @@ body {
   */
 }
 
+.highlight { background-color: red; }
+
 /* text styles */
 .iobio {
     font-size: 34px;

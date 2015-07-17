@@ -23,18 +23,51 @@
   <link rel="stylesheet" href="assets/css/gene.d3.css" />
   <link rel="stylesheet" href="assets/css/site.css" />
 
+  <!-- scripts -->
+  <script src="app/app.js"></script>
+  <script>
+    var selectedSample = "Proband";
+
+    $(document).ready(function(){
+      $("#test").click(function(){
+        $("#value").text(selectedSample);
+      });
+    });
+
+    $(document).ready(function() {
+      $("#alignment-input-button").click(function() {
+        var value = $("#alignment-input").val();
+        $("#alignment-table tr:last").after("<tr><td>" + value + "</td><td>Not set</td></tr>");
+      });
+    });
+
+    $(document).ready(function(){
+      $("#alignment-table tr").click(function(){
+        $(this).toggleClass("highlight");
+      });
+    });
+
+    $(document).ready(function() {
+      $("#probandButton").click(function() {
+        selectedSample = "Proband";
+      });
+    });
+
+    $(document).ready(function() {
+      $("#motherButton").click(function() {
+        selectedSample = "Mother";
+      });
+    });
+
+    $(document).ready(function() {
+      $("#fatherButton").click(function() {
+        selectedSample = "Father";
+      });
+    });
+  </script>
 </head>
 
-
 <body>
-  
-  <!-- SCRIPTS -->
-  <script>
-    var selectedSample = 'proband'
-    $('.table > tr').click(function() {
-      document.getElementById("home").innerHTML = "bob";
-    })
-  </script>
 
   <div class="container-fluid">
 
@@ -47,20 +80,18 @@
     <!-- Data entry card -->
     <div class="general-card shadow-z-1" style="padding-top:70px;">
       <div class="card-label">DATA SELECTION</div>
-      <ul class="list-group">
-        <li class="list-group-item" onclick="document.getElementById('home').innerHTML = 'bob';">First item</li>
-        <li class="list-group-item">Second item</li>
-        <li class="list-group-item">Third item</li>
-      </ul>
     </div>
 
     <!-- Data entry card -->
     <div class="general-card shadow-z-1">
       <div class="card-label" style="padding-top:5px;">DATA SELECTION</div>
 
+      <input id="alignment-input" style="margin-left:5px;" />
+      <button id="alignment-input-button">Select file</button>
+
         <!-- Table of files -->
         <div style="padding-left:5px; padding-top:5px; padding-bottom:5px;">
-          <table class="table table-bordered table-responsive table-hover" style="width:70%;">
+          <table class="table table-bordered table-responsive table-hover" id="alignment-table" style="width:70%;">
             <thead>
               <tr>
                 <th>Filename</th>
@@ -68,18 +99,6 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>File1</td>
-                <td>Not set</td>
-              </tr>
-              <tr>
-                <td>File2</td>
-                <td>Not set</td>
-              </tr>
-              <tr>
-                <td>File3</td>
-                <td>Not set</td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -87,18 +106,20 @@
         <!-- Pedigree select -->
         <form role="form" style="padding-left:5px;">
           <div class="radio-inline">
-            <label><input type="radio" name="optradio" checked="">Proband</label>
+            <label><input type="radio" name="optradio" checked="" id="probandButton">Proband</label>
           </div>
           <div class="radio-inline">
-            <label><input type="radio" name="optradio">Mother</label>
+            <label><input type="radio" name="optradio" id="motherButton">Mother</label>
           </div>
           <div class="radio-inline">
-            <label><input type="radio" name="optradio">Father</label>
+            <label><input type="radio" name="optradio" id="fatherButton">Father</label>
           </div>
         </form>
 
       </div>
     </div>
-  </div>
-</body>
 
+  </div>
+
+</body>
+</html>
