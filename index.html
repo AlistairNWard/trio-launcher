@@ -28,12 +28,6 @@
   <script>
     var selectedSample = "Proband";
 
-    $(document).ready(function(){
-      $("#test").click(function(){
-        $("#value").text(selectedSample);
-      });
-    });
-
     $(document).ready(function() {
       $("#alignment-input-button").click(function() {
         var value = $("#alignment-input").val();
@@ -42,8 +36,8 @@
     });
 
     $(document).ready(function(){
-      $("#alignment-table tr").click(function(){
-        $(this).toggleClass("highlight");
+      $("#alignment-table tbody tr").click(function(){
+        $(this).find("td:last").text(selectedSample);
       });
     });
 
@@ -99,6 +93,10 @@
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>Sample</td>
+                <td>Not set</td>
+              </tr>
             </tbody>
           </table>
         </div>
