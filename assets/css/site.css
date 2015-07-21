@@ -13,8 +13,6 @@ body {
   */
 }
 
-.highlight { background-color: red; }
-
 /* text styles */
 .iobio {
     font-size: 34px;
@@ -43,6 +41,11 @@ body {
     float: right;
     margin-right: 5px;
     margin-bottom: 5px;
+}
+
+.button-text {
+  text-transform: none;
+  color:grey;
 }
 
 /* trio-launcher styles */
